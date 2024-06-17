@@ -6,33 +6,59 @@ If you are unfortunate to be in this situation, now it is time take your Mac on 
 
 ---
 
-Persistent solution after rebooting, based on [unixzii's guide](https://gist.github.com/unixzii/6f25be1842399022e16ad6477a304286). Verified on macOS 15.0 Beta (24A5264n), but there is no guarentee that it will always work on later macOS versions.
+Persistent solution after rebooting, based on [Cyandev's guide](https://gist.github.com/unixzii/6f25be1842399022e16ad6477a304286). Verified on macOS 15.0 Beta (24A5264n), but there is no guarentee that it will always work on later macOS versions.
 
-# Prerequisites
+## Prerequisites
 
 * Xcode is installed and run at least once.
 * SIP debugging restrictions are disabled (via `csrutil enable --without debug` command in recovery mode).
 
-# Disclaimer
+## Disclaimer
 
 Disabling SIP can cause some unknown effect. And for now, Xcode LLM is not stable and may cause kernel panics, which will lose some of your document modifications. **Please use with caution.**
 
-# Install
+## Install
+
+### Via [Homebrew](https://brew.sh)
 
 ```powershell
 brew install catme0w/tap/zouxian
 sudo brew services start zouxian
 ```
 
-> Check out [the formula](https://github.com/CatMe0w/homebrew-tap/blob/main/Formula/zouxian.rb) if you're interested
+> Check out [the formula](https://github.com/CatMe0w/homebrew-tap/blob/master/Formula/zouxian.rb) if you're interested
 
-# Uninstall
+### Manually
+
+```powershell
+sudo curl https://raw.githubusercontent.com/CatMe0w/zouxian/master/zouxian.sh -o /usr/local/bin/zouxian
+sudo chmod +x /usr/local/bin/zouxian
+sudo curl https://raw.githubusercontent.com/CatMe0w/zouxian/master/cat.me0w.zouxian.plist -o /Library/LaunchDaemons/cat.me0w.zouxian.plist
+sudo launchctl load -w /Library/LaunchDaemons/cat.me0w.zouxian.plist
+```
+
+## Uninstall
+
+### Via [Homebrew](https://brew.sh)
 
 ```powershell
 sudo brew services stop zouxian
-brew uninstall zouxian
+sudo rm -rf /opt/homebrew/Cellar/zouxian
+brew untap catme0w/tap
 ```
 
-# License
+### Manually
+
+```powershell
+sudo launchctl unload -w /Library/LaunchDaemons/cat.me0w.zouxian.plist
+sudo rm /Library/LaunchDaemons/cat.me0w.zouxian.plist
+sudo rm /usr/local/bin/zouxian
+```
+
+## Acknowledgement
+
+Thanks for those who make this possible together: [Cyandev](https://twitter.com/unixzii), [Lakr233](https://twitter.com/Lakr233), [Sou1gh0st](https://twitter.com/Sou1gh0st), Yuriko.
+
+## License
 
 MIT License
