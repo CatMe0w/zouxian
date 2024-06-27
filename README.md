@@ -6,7 +6,13 @@ If you are unfortunate to be in this situation, now it is time take your Mac on 
 
 ---
 
-Persistent solution after rebooting, based on [Cyandev's guide](https://gist.github.com/unixzii/6f25be1842399022e16ad6477a304286). Verified on macOS 15.0 Beta (24A5264n), but there is no guarentee that it will always work on later macOS versions.
+Persistent solution after rebooting, based on [Cyandev's guide](https://gist.github.com/unixzii/6f25be1842399022e16ad6477a304286).
+
+## Version table
+
+|From|To||
+|-|-|-|
+|15.0 Beta 1 (24A5264n)|15.0 Beta 2 (24A5279h)|Supported|
 
 ## Prerequisites
 
