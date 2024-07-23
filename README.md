@@ -12,8 +12,8 @@ Persistent solution after rebooting, based on [Cyandev's guide](https://gist.git
 
 |From|To||
 |-|-|-|
-|Macintosh System 1|14.5 (23F79)|No Xcode LLM available|
-|15.0 Beta 1 (24A5264n)|15.0 Beta 3 (24A5289g/24A5289h)|Supported|
+|Macintosh System 1|14.6 (23G80)|No Xcode LLM available|
+|15.0 Beta 1 (24A5264n)|15.0 Beta 4 (24A5298h)|Supported|
 
 ## Prerequisites
 
