@@ -1,6 +1,6 @@
 # zouxian 走线
 
-Apple restricted the access to Xcode LLM (Predictive Code Completion) feature on China models of Mac. That is, if you are using a Mac bought in China, even if you are not in China, you will not be able to use Predictive Code Completion. 
+Apple restricted the access to Apple Intelligence and Xcode LLM (Predictive Code Completion) feature on China models of Mac. That is, if you are using a Mac bought in China, even if you are not in China, you will not be able to use Apple Intelligence or Predictive Code Completion.
 
 If you are unfortunate to be in this situation, now it is time take your Mac on a journey of _[Zouxian](https://en.wikipedia.org/wiki/Zouxian_(phenomenon))_.
 
@@ -10,15 +10,25 @@ Persistent solution after rebooting, based on [Cyandev's guide](https://gist.git
 
 ## Version table
 
-|From|To||
-|-|-|-|
-|Macintosh System 1|14.6 (23G80)|No Xcode LLM available|
-|15.0 Beta 1 (24A5264n)|15.0 Beta 4 (24A5298h)|Supported|
+### Apple Intelligence
+
+| From                   | To                     |                                          |
+| ---------------------- | ---------------------- | ---------------------------------------- |
+| Macintosh System 1     | 15.0 Beta 4 (24A5298h) | No Apple Intelligence available          |
+| 15.1 Beta 1 (24B5009l) | 15.1 Beta 1 (24B5009l) | Supported (requires `zouxian` >= v0.2.0) |
+
+### Xcode LLM (Xcode Predictive Code Completion)
+
+| From                   | To                     |                        |
+| ---------------------- | ---------------------- | ---------------------- |
+| Macintosh System 1     | 14.6 (23G80)           | No Xcode LLM available |
+| 15.0 Beta 1 (24A5264n) | 15.1 Beta 1 (24B5009l) | Supported              |
 
 ## Prerequisites
 
-* Xcode is installed and run at least once.
-* SIP debugging restrictions are disabled (via `csrutil enable --without debug` command in recovery mode).
+- SIP debugging restrictions are disabled (via `csrutil enable --without debug` command in recovery mode).
+- For Apple Intelligence: A non-China Apple ID signed in.
+- For Xcode Predictive Code Completion: Xcode is installed and run at least once.
 
 ## Disclaimer
 
