@@ -1,6 +1,8 @@
 # zouxian 走线
 
-Apple restricted the access to Apple Intelligence and Xcode LLM (Predictive Code Completion) feature on China models of Mac. That is, if you are using a Mac bought in China, even if you are not in China, you will not be able to use Apple Intelligence or Predictive Code Completion.
+中文版请见[这里](https://github.com/CatMe0w/zouxian/blob/master/README_zh.md)。
+
+Apple restricted the access to Apple Intelligence and Xcode LLM (Predictive Code Completion) feature on China models of Mac. That is, if you are using a Mac bought in China, even if you are not in China, you will not be able to use Apple Intelligence or Xcode Predictive Code Completion.
 
 If you are unfortunate to be in this situation, now it is time take your Mac on a journey of _[Zouxian](https://en.wikipedia.org/wiki/Zouxian_(phenomenon))_.
 
@@ -27,18 +29,21 @@ Persistent solution after rebooting, based on [Cyandev's guide](https://gist.git
 ## Prerequisites
 
 - SIP debugging restrictions are disabled (via `csrutil enable --without debug` command in recovery mode).
-- For Apple Intelligence: A non-China Apple ID signed in.
+- For Apple Intelligence: A non-China Apple ID signed in, region set to the United States, and language set to English (US).
 - For Xcode Predictive Code Completion: Xcode is installed and run at least once.
+
+> [!NOTE]  
+> No need to install Xcode if you only want to use Apple Intelligence.
 
 ## Disclaimer
 
-Disabling SIP can cause some unknown effect. And for now, Xcode LLM is not stable and may cause kernel panics, which will lose some of your document modifications. **Please use with caution.**
+Disabling SIP can cause some unknown effect. **Please use with caution.**
 
 ## Install
 
 ### Via [Homebrew](https://brew.sh)
 
-```powershell
+```shell
 brew install catme0w/tap/zouxian
 sudo brew services start zouxian
 ```
@@ -47,7 +52,7 @@ sudo brew services start zouxian
 
 ### Manually
 
-```powershell
+```shell
 sudo curl https://raw.githubusercontent.com/CatMe0w/zouxian/master/zouxian.sh -o /usr/local/bin/zouxian
 sudo chmod +x /usr/local/bin/zouxian
 sudo curl https://raw.githubusercontent.com/CatMe0w/zouxian/master/cat.me0w.zouxian.plist -o /Library/LaunchDaemons/cat.me0w.zouxian.plist
@@ -58,7 +63,7 @@ sudo launchctl load -w /Library/LaunchDaemons/cat.me0w.zouxian.plist
 
 ### Via [Homebrew](https://brew.sh)
 
-```powershell
+```shell
 sudo brew services stop zouxian
 sudo rm -rf /opt/homebrew/Cellar/zouxian
 brew untap catme0w/tap
@@ -66,7 +71,7 @@ brew untap catme0w/tap
 
 ### Manually
 
-```powershell
+```shell
 sudo launchctl unload -w /Library/LaunchDaemons/cat.me0w.zouxian.plist
 sudo rm /Library/LaunchDaemons/cat.me0w.zouxian.plist
 sudo rm /usr/local/bin/zouxian
