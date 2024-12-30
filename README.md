@@ -1,6 +1,24 @@
-# zouxian 走线
+# zouxian is no longer recommended
 
 中文版请见[这里](https://github.com/CatMe0w/zouxian/blob/master/README_zh.md)。
+
+zouxian requires disabling SIP, which is not recommended for security reasons.
+
+Thanks to [Kyle-Ye](https://github.com/Kyle-Ye), he has written a [tool](https://github.com/Kyle-Ye/eligibility) that can enable Apple Intelligence and Xcode Predictive Code Completion without disabling SIP.
+
+Please follow the instructions [here](https://github.com/CatMe0w/zouxian/blob/master/repatriate_guide.md).
+
+zouxian will not be abandoned. If Kyle-Ye's solution does not work on your device, zouxian is still an option.
+
+(To be honest, Apple Intelligence is underwhelming, and I rarely use Mac afterwards, so I have hardly paid attention to this project. Sorry for the long wait.)
+
+---
+
+The rest of the README is kept for historical reasons.
+
+---
+
+# zouxian 走线
 
 Apple restricted the access to Apple Intelligence and Xcode LLM (Predictive Code Completion) feature on China models of Mac. That is, if you are using a Mac bought in China, even if you are not in China, you will not be able to use Apple Intelligence or Xcode Predictive Code Completion.
 
@@ -11,6 +29,8 @@ If you are unfortunate to be in this situation, now it is time take your Mac on 
 Persistent solution after rebooting, based on [Cyandev's guide](https://gist.github.com/unixzii/6f25be1842399022e16ad6477a304286).
 
 ## Version table
+
+> This table is no longer updated.
 
 ### Apple Intelligence
 
@@ -79,7 +99,7 @@ sudo rm /usr/local/bin/zouxian
 
 ## Acknowledgement
 
-Thanks for those who make this possible together: [Cyandev](https://twitter.com/unixzii), [Lakr233](https://twitter.com/Lakr233), [Sou1gh0st](https://twitter.com/Sou1gh0st), Yuriko.
+Thanks for those who make this possible together: [Kyle-Ye](https://github.com/Kyle-Ye), [Cyandev](https://twitter.com/unixzii), [Lakr233](https://twitter.com/Lakr233), [Sou1gh0st](https://twitter.com/Sou1gh0st), Yuriko.
 
 ## License
 

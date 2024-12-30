@@ -1,3 +1,21 @@
+# 不再推荐使用 zouxian
+
+zouxian 需要关闭 SIP，存在安全隐患。
+
+感谢 [Kyle-Ye](https://github.com/Kyle-Ye) 编写了能够在不关闭 SIP 的情况下启用 Apple Intelligence 和 Xcode Predictive Code Completion 的 [工具](https://github.com/Kyle-Ye/eligibility)。
+
+请按照 [这里](https://github.com/CatMe0w/zouxian/blob/master/repatriate_guide_zh.md) 的说明操作。
+
+zouxian 不会被放弃，如果 Kyle-Ye 的方案在你的设备上无效，zouxian 仍是一个选择。
+
+（讲真，Apple Intelligence 令人失望，之后我也很少使用 Mac，因此几乎没有关注这个项目，抱歉久等了。）
+
+---
+
+README 的其余部分仅供历史参考。
+
+---
+
 # zouxian 走线
 
 Apple 限制在国行 Mac 上使用 Apple Intelligence 和 Xcode LLM（Predictive Code Completion）。如果你使用在中国购买的 Mac，即使你不在中国，你也无法使用 Apple Intelligence 和 Xcode Predictive Code Completion。
@@ -6,9 +24,11 @@ Apple 限制在国行 Mac 上使用 Apple Intelligence 和 Xcode LLM（Predictiv
 
 ---
 
-可在重启后保持的方案，基于 [Cyandev 的指南](https://gist.github.com/unixzii/6f25be1842399022e16ad6477a304286) 。
+可在重启后保持的方案，基于 [Cyandev 的指南](https://gist.github.com/unixzii/6f25be1842399022e16ad6477a304286)。
 
 ## 系统版本
+
+> 该表格不再更新。
 
 ### Apple Intelligence
 
@@ -77,7 +97,7 @@ sudo rm /usr/local/bin/zouxian
 
 ## 感谢
 
-感谢使得这一切成为可能的人们：[Cyandev](https://twitter.com/unixzii)、[Lakr233](https://twitter.com/Lakr233)、[Sou1gh0st](https://twitter.com/Sou1gh0st)、Yuriko。
+感谢使得这一切成为可能的人们：[Kyle-Ye](https://github.com/Kyle-Ye)、[Cyandev](https://twitter.com/unixzii)、[Lakr233](https://twitter.com/Lakr233)、[Sou1gh0st](https://twitter.com/Sou1gh0st)、Yuriko。
 
 ## 许可证
 
