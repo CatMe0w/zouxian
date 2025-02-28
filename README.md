@@ -1,24 +1,6 @@
-# zouxian is no longer recommended
+# zouxian 走线
 
 中文版请见[这里](https://github.com/CatMe0w/zouxian/blob/master/README_zh.md)。
-
-zouxian requires disabling SIP, which is not recommended for security reasons.
-
-Thanks to [Kyle-Ye](https://github.com/Kyle-Ye), he has written a [tool](https://github.com/Kyle-Ye/eligibility) that can enable Apple Intelligence and Xcode Predictive Code Completion without disabling SIP.
-
-Please follow the instructions [here](https://github.com/CatMe0w/zouxian/blob/master/repatriate_guide.md).
-
-zouxian will not be abandoned. If Kyle-Ye's solution does not work on your device, zouxian is still an option.
-
-(To be honest, Apple Intelligence is underwhelming, and I rarely use Mac afterwards, so I have hardly paid attention to this project. Sorry for the long wait.)
-
----
-
-The rest of the README is kept for historical reasons.
-
----
-
-# zouxian 走线
 
 Apple restricted the access to Apple Intelligence and Xcode LLM (Predictive Code Completion) feature on China models of Mac. That is, if you are using a Mac bought in China, even if you are not in China, you will not be able to use Apple Intelligence or Xcode Predictive Code Completion.
 
@@ -30,23 +12,19 @@ Persistent solution after rebooting, based on [Cyandev's guide](https://gist.git
 
 ## Version table
 
-> This table is no longer updated.
+| From                   | To             |                                                                                                           |
+| ---------------------- | -------------- | --------------------------------------------------------------------------------------------------------- |
+| Macintosh System 1     | 14.6 (23G80)   | Not applicable                                                                                            |
+| 15.0 Beta 1 (24A5264n) | 15.3.1 (24D70) | Install [Darwin Eligibility Override](https://github.com/CatMe0w/zouxian/blob/master/repatriate_guide.md) |
+| 15.4 Beta 1 (24E5206s) | ?              | Install zouxian                                                                                           |
 
-### Apple Intelligence
+## Disclaimer
 
-| From                   | To                     |                                          |
-| ---------------------- | ---------------------- | ---------------------------------------- |
-| Macintosh System 1     | 15.0 Beta 4 (24A5298h) | No Apple Intelligence available          |
-| 15.1 Beta 1 (24B5009l) | 15.1 Beta 1 (24B5009l) | Supported (requires `zouxian` >= v0.2.0) |
+Disabling SIP will reduce the security of the system and make iOS apps in App Store and Apple Pay unusable.
 
-### Xcode LLM (Xcode Predictive Code Completion)
+## Install
 
-| From                   | To                     |                        |
-| ---------------------- | ---------------------- | ---------------------- |
-| Macintosh System 1     | 14.6 (23G80)           | No Xcode LLM available |
-| 15.0 Beta 1 (24A5264n) | 15.1 Beta 1 (24B5009l) | Supported              |
-
-## Prerequisites
+### Prerequisites
 
 - SIP debugging restrictions are disabled (via `csrutil enable --without debug` command in recovery mode).
 - For Apple Intelligence: A non-China Apple ID signed in, region set to the United States, and language set to English (US).
@@ -55,13 +33,7 @@ Persistent solution after rebooting, based on [Cyandev's guide](https://gist.git
 > [!NOTE]  
 > No need to install Xcode if you only want to use Apple Intelligence.
 
-## Disclaimer
-
-Disabling SIP can cause some unknown effect. **Please use with caution.**
-
-## Install
-
-### Via [Homebrew](https://brew.sh)
+### Method 1: Via [Homebrew](https://brew.sh)
 
 ```shell
 brew install catme0w/tap/zouxian
@@ -70,7 +42,7 @@ sudo brew services start zouxian
 
 > Check out [the formula](https://github.com/CatMe0w/homebrew-tap/blob/master/Formula/zouxian.rb) if you're interested
 
-### Manually
+### Method 2: Manually
 
 ```shell
 sudo curl https://raw.githubusercontent.com/CatMe0w/zouxian/master/zouxian.sh -o /usr/local/bin/zouxian
@@ -81,7 +53,7 @@ sudo launchctl load -w /Library/LaunchDaemons/cat.me0w.zouxian.plist
 
 ## Uninstall
 
-### Via [Homebrew](https://brew.sh)
+### If Installed Via [Homebrew](https://brew.sh)
 
 ```shell
 sudo brew services stop zouxian
@@ -89,7 +61,7 @@ sudo rm -rf /opt/homebrew/Cellar/zouxian
 brew untap catme0w/tap
 ```
 
-### Manually
+### If Installed Manually
 
 ```shell
 sudo launchctl unload -w /Library/LaunchDaemons/cat.me0w.zouxian.plist
